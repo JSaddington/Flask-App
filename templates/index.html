@@ -1,13 +1,11 @@
-<!DOCTYPE html>
 {% extends "base_template.html" %}
 {% block title %}Home page{% endblock %}
 {% block content %}
-    {% with messages = get_flashed_messages() %}
+{% with messages = get_flashed_messages() %}
         {% if messages %}
             {% for msg in messages %}
                 <p>{{msg}}</p>
             {% endfor %}
         {% endif %}
     {% endwith %}
-<p>Welcome {{user}}</p>
 {% endblock %}
